@@ -15,5 +15,11 @@ public class Numeros{
                 System.out.println(" "+num);
             }
         }
+        System.out.println("Números ímpares:");
+        for(num = 1; num < 2500; num++){
+            if(num%2 == 1){
+                System.out.println(" "+num);
+            }
+        }
     }
 }
