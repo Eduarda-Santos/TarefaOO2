@@ -1,7 +1,7 @@
 public class Numeros{
 
     public static void main(String[] args){
-        int num, cont = 0;
+        int num, cont = 0, i, aux;
 
         System.out.println("Números divididos por 11 com resto 5:");
         for(num = 1; num < 2500; num++){
@@ -23,27 +23,15 @@ public class Numeros{
         }
         System.out.println("Números primos:");
         for(num = 1; num < 2500; num++){
-            if(num%2 == 0){
-                cont++;
-            }
-            else if (num%3 == 0){
-                cont++;
-            }
-            else if(num%5 == 0){
-                cont++;
-            }
-            else if(num%7 == 0){
-                cont++;
-            }
-            else if(num%11 == 0){
-                cont++;
-            }
-            else if(num%13 == 0){
-                cont++;
-            }
-            if(cont == 1){
-                System.out.println(" "+num);
-            }
+           for(i = 1; i < 20; i++){
+               aux = num % i;
+               if(aux == 0){
+                    cont++;
+                } 
+                if(cont == 2){
+                    System.out.println(" "+num);
+                }
+            } 
         }
     }
 }
